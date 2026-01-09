@@ -1,11 +1,13 @@
+
+
+
 # scrcpy helper application
 
 ## what it does
 this helper application, available as either a python script or a executable file (needs to be built from the python file with pyinstaller) is intended to automate connection of a PC to a Android smartphone that has wireless debugging enabled.
 
 ## requirements
-this script uses nmap to scan for open ports on your system, so you need nmap to be installed. this can be achieved by using the official installer from (link) https://nmap.org/download
-
+this script uses nmap to scan for open ports on your system, so you need nmap to be installed. this can be achieved by using the official installer from https://nmap.org/download
 the script as well as the executable file need to be placed in the same folder as scrcpy.
 of course, also a smartphone running Android as OS is needed. on the smartphone, wireless debugging must be enabled - recommended way is using the quick settings tile. the smartphone should have a static IP adress to make sure the cofigured IP adress can be reliably found.
 
@@ -30,6 +32,13 @@ it's possible that you need to adjust the range of port numbers to scan, if so t
 
 it is also possible that the path to nmap needs to be adjusted according to your system, the default is
 > nmap_path  =  r"C:\Program Files (x86)\Nmap\nmap.exe"
+
+## building an executable file
+having an executable file may be more comfortable on windows, as one can just put a shortcut to it on the desktop and use it, instead of having to execute the script via terminal or VS Code or similar methods. 
+To do so, the pyinstaller package (https://pypi.org/project/pyinstaller/) needs to be installed: `pip install pyinstaller`
+then, open a terminal in the folder the connector.py file is located (ideally, that should be the scrcpy folder) and execute pyinstaller with
+`pyinstaller --onefile connector.py`
+the completed executable file will then be available in a subfolder called `dist` and can be copied into the scrcpy folder. a (desktop) shortcut can then be placed where wanted.
 
 ## usage
 1. enable wireless debugging on the phone
