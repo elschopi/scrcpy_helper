@@ -36,9 +36,12 @@ it is also possible that the path to nmap needs to be adjusted according to your
 
 ## building an executable file
 having an executable file may be more comfortable on windows, as one can just put a shortcut to it on the desktop and use it, instead of having to execute the script via terminal or VS Code or similar methods. 
+
 To do so, the pyinstaller package (https://pypi.org/project/pyinstaller/) needs to be installed: `pip install pyinstaller`
+
 then, open a terminal in the folder the connector.py file is located (ideally, that should be the scrcpy folder) and execute pyinstaller with
 `pyinstaller --onefile connector.py`
+
 the completed executable file will then be available in a subfolder called `dist` and can be copied into the scrcpy folder. a (desktop) shortcut can then be placed where wanted.
 
 ## usage
