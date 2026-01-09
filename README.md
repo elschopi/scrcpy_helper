@@ -5,6 +5,7 @@ this helper application, available as either a python script or a executable fil
 
 ## requirements
 this script uses nmap to scan for open ports on your system, so you need nmap to be installed. this can be achieved by using the official installer from (link) https://nmap.org/download
+
 the script as well as the executable file need to be placed in the same folder as scrcpy.
 of course, also a smartphone running Android as OS is needed. on the smartphone, wireless debugging must be enabled - recommended way is using the quick settings tile. the smartphone should have a static IP adress to make sure the cofigured IP adress can be reliably found.
 
